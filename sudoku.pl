@@ -109,4 +109,4 @@ sudoku(Rows, Width, Height, BlockWidth, BlockHeight, CellConstraint, Rows) :-
   write_sudoku(Rows).
 
 % TODO: read puzzle from text file.
-% TODO: make it runable from the command line.
+% TODO: make it runnable from the command line.
