@@ -74,15 +74,15 @@ sub_matrix(M, SMIMin, SMJMin, SMW, SMH, SM) :-
 %
 disjoint_sub_matrices(M, MW, MH, SMW, SMH, SMs) :-
   bagof(SM,
-          BI^BJ^
-          (BIMax is MW - SMW,
-           BJMax is MH - SMH,
-           between(0, BIMax, BI),
-           between(0, BJMax, BJ),
-           0 is BI mod SMW,
-           0 is BJ mod SMH,
-           sub_matrix(M, BI, BJ, SMW, SMH, SM)),
-          SMs).
+        BI^BJ^
+        (BIMax is MW - SMW,
+         BJMax is MH - SMH,
+         between(0, BIMax, BI),
+         between(0, BJMax, BJ),
+         0 is BI mod SMW,
+         0 is BJ mod SMH,
+         sub_matrix(M, BI, BJ, SMW, SMH, SM)),
+        SMs).
 
 % TODO: documentation.
 maplength(L, List) :- length(List, L).
